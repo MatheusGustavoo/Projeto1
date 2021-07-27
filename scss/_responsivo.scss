@@ -1,0 +1,230 @@
+@mixin d($d) {
+  @if $d == laptop {
+    @media only screen and (min-width:785px) and (max-width:1170px){
+      @content;
+    }
+  } @else if $d == tablet{
+    @media only screen and(min-width:643px) and (max-width:785px){
+      @content;
+    }
+  } @else if $d == celular{
+    @media only screen and(min-width:360px) and (max-width:643px){
+      @content;
+    }
+  }
+}
+
+
+
+@include d(laptop){
+  section{
+    height: 1100px;
+  }
+  header{
+    
+    h1{
+      font-size: 20px;
+    }
+    li{
+      font-size: 15px;
+    }
+  }
+  nav{
+    h1{
+      font-size: 33px;
+    }
+  }
+}
+
+@include d(tablet){
+  
+  section{
+    height: 1600px;
+  
+  }
+  header{
+    h1{
+      font-size: 18px;
+    }
+    .btn-menu{
+      display: block;
+      position: absolute;
+      right: 20px;
+      bottom: 33px;
+      background-color: #222;
+      font-weight: bold;
+      color: white;
+      border-radius: 6px;
+      padding: 5px 20px;
+      border: none;
+      &::before{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 12px;
+        background-color: white;
+        box-shadow: 0 4px #fff, 0 -4px #fff;
+        margin-right: 5px;
+        margin-bottom: 3px;
+      }
+    }
+    ul{
+      text-align: center;
+      width: 120px;
+      display: none;
+      position: absolute;
+      background-color: $azul-claro;
+      right: 20px;
+      top: 40px;
+      border: 2px solid black;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -10px;
+        width: 0px;
+        height: 0px;
+        left: 90px;
+        border-bottom: 10px solid #5EBCEB;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;}
+      &.ativar{
+        display: block;
+      }
+    }
+    
+    li{
+      padding: 10px 10px;
+      font-size: 15px;
+    }
+  }
+  nav{
+    h1{
+      font-size: 31px;
+    }
+    
+  }
+}
+
+@include d(celular){
+  
+
+  
+  header{
+    height: 80px;
+    .logo{
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+    img{
+      width: 125px;
+    height: 29px;
+    }
+    .btn-menu{
+      font-size: 10px;
+      width: 55px;
+      height: 20px;
+      border: none;
+      display: block;
+      position: absolute;
+      right: 15px;
+      bottom: 38px;
+      background-color: #222;
+      font-weight: bold;
+      color: white;
+      border-radius: 4px;
+      &::before{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 8px;
+        background-color: white;
+        box-shadow: 0 3px #fff, 0 -3px #fff;
+        margin-right: 3px;
+        margin-bottom: 2px;
+      }
+    }
+    // .grid{
+    //   flex-wrap: nowrap;
+    // }
+    h1{
+      font-size: 15px;
+    }
+    ul{
+      text-align: center;
+      width: 120px;
+      display: none;
+      position: absolute;
+      background-color: $azul-claro;
+      right: 20px;
+      top: 30px;
+      border: 2px solid black;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -10px;
+        width: 0px;
+        height: 0px;
+        left: 90px;
+        border-bottom: 10px solid #5EBCEB;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;}
+      &.ativar{
+        display: block;
+      }
+
+    }
+    li{
+      padding: 12px 5px;
+      font-size: 14px;
+    }
+  }
+  nav{
+    margin-top: 80px;
+    h1{
+      font-size: 22px;
+    white-space: none;
+
+    }
+    h2{
+      font-size: 12px;
+    }
+    h3{
+      font-size: 9px;
+    }
+  }
+  section{
+    height: 1600px;
+    h1.principal{
+      font-size: 16px;
+      text-align: center;
+      @include separador-horizontal-baixo(black, 17px)
+    }
+    div.box{
+      &.ativar-scroll{
+        height: 400px;
+        width: 350px;
+        .imgs{
+          p.valor{
+            font-size: 16px;
+          }
+        }
+      }
+      
+    }
+  }
+  main{
+    h1{
+      font-size: 16px;
+    }
+  }
+  footer{
+  }
+}
+
+// @media only screen and (min-width: 822px) and (max-width: 1024px) {
+//   section {
+//     height: 1200px;
+//   }
+// }

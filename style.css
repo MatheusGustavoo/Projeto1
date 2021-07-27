@@ -1,0 +1,521 @@
+h1 {
+  width: 200px;
+}
+
+h2 {
+  width: 300px;
+}
+
+.grid {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+body, ul, li, a, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #377C9E;
+  height: 102px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  border-bottom: 3px solid black;
+  z-index: 10;
+}
+
+header .btn-menu {
+  display: none;
+}
+
+header img {
+  width: 131px;
+  height: 35px;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #5EBCEB;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+header h1::after {
+  content: '';
+  display: block;
+  height: 50px;
+  width: 2px;
+  background-color: black;
+  margin-left: -14px;
+  margin-top: -40px;
+}
+
+header .logo {
+  display: flex;
+  width: 405px;
+  padding-top: 30px;
+}
+
+header .grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header ul {
+  list-style: none;
+  width: 300px;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header li {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+header li:hover {
+  color: white;
+}
+
+nav {
+  height: 570px;
+  background-image: url("img/meio-logo.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  margin-top: 102px;
+}
+
+nav h1 {
+  line-height: 20px;
+  width: auto;
+  margin: 0 auto;
+  font-size: 36px;
+  padding-top: 220px;
+  white-space: wrap;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+nav h2 {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+nav h2::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 120px;
+  background-color: white;
+  margin: 0 auto 25px;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  nav h2::before {
+    width: 90px;
+  }
+}
+
+nav h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 120px;
+  background-color: white;
+  margin: 25px auto;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  nav h2::after {
+    width: 90px;
+  }
+}
+
+nav h3 {
+  font-size: 13px;
+  width: 105px;
+  font-weight: bold;
+  background-color: #960064;
+  padding: 15px 15px 15px;
+  margin: 90px auto;
+  border-radius: 4px;
+  box-shadow: 0 0 10px black;
+}
+
+nav h3:hover {
+  background-color: #5EBCEB;
+}
+
+section {
+  border-top: 4px solid #377C9E;
+  height: 650px;
+}
+
+section h1.principal {
+  margin: 48px auto;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5EBCEB;
+  letter-spacing: 0.02em;
+}
+
+section h1.principal::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 120px;
+  background-color: black;
+  margin: 30px auto;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  section h1.principal::after {
+    width: 90px;
+  }
+}
+
+section .ap {
+  margin: 57px auto;
+  height: 440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section .ap .box {
+  width: 390px;
+  height: 386px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ccc;
+  margin: 40px 0;
+  display: none;
+  animation: show 1s forwards;
+}
+
+section .ap .box.ativar-scroll {
+  display: block;
+}
+
+section .ap .box h1 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background-color: #377C9E;
+  width: 100%;
+  padding: 12px 0 12px 0;
+}
+
+section .ap .box img {
+  width: 100%;
+  margin-left: 1px;
+}
+
+section .ap .box h2 {
+  color: #960064;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1px 10px;
+}
+
+section .ap .box .imgs {
+  display: flex;
+  flex-direction: row;
+}
+
+section .ap .box .imgs img {
+  width: 45px;
+}
+
+section .ap .box .imgs .ft {
+  display: flex;
+  flex-direction: column;
+}
+
+section .ap .box .imgs .cont-ft p {
+  padding-top: 20px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+section .ap .box .imgs .varanda {
+  margin-left: 6px;
+}
+
+section .ap .box .imgs .anuncio {
+  margin-left: 60px;
+  margin-top: 50px;
+}
+
+section .ap .box .imgs .valor {
+  margin-top: 70px;
+  margin-left: -80px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+main {
+  height: 650px;
+  border-top: 3px solid #377C9E;
+  margin-top: 90px;
+}
+
+main h1 {
+  margin: 48px auto;
+  font-size: 22px;
+  font-weight: 700;
+  color: #960064;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+main h1::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 120px;
+  background-color: black;
+  margin: 15px auto;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  main h1::after {
+    width: 90px;
+  }
+}
+
+footer {
+  background-color: #377C9E;
+  height: 100px;
+}
+
+@media only screen and (min-width: 785px) and (max-width: 1170px) {
+  section {
+    height: 1100px;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  header li {
+    font-size: 15px;
+  }
+  nav h1 {
+    font-size: 33px;
+  }
+}
+
+@media only screen and (min-width: 643px) and (max-width: 785px) {
+  section {
+    height: 1600px;
+  }
+  header h1 {
+    font-size: 18px;
+  }
+  header .btn-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 33px;
+    background-color: #222;
+    font-weight: bold;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 20px;
+    border: none;
+  }
+  header .btn-menu::before {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background-color: white;
+    box-shadow: 0 4px #fff, 0 -4px #fff;
+    margin-right: 5px;
+    margin-bottom: 3px;
+  }
+  header ul {
+    text-align: center;
+    width: 120px;
+    display: none;
+    position: absolute;
+    background-color: #5EBCEB;
+    right: 20px;
+    top: 40px;
+    border: 2px solid black;
+  }
+  header ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    left: 90px;
+    border-bottom: 10px solid #5EBCEB;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  header ul.ativar {
+    display: block;
+  }
+  header li {
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+  nav h1 {
+    font-size: 31px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  header {
+    height: 80px;
+  }
+  header .logo {
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+  header img {
+    width: 125px;
+    height: 29px;
+  }
+  header .btn-menu {
+    font-size: 10px;
+    width: 55px;
+    height: 20px;
+    border: none;
+    display: block;
+    position: absolute;
+    right: 15px;
+    bottom: 38px;
+    background-color: #222;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+  }
+  header .btn-menu::before {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 8px;
+    background-color: white;
+    box-shadow: 0 3px #fff, 0 -3px #fff;
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+  header h1 {
+    font-size: 15px;
+  }
+  header ul {
+    text-align: center;
+    width: 120px;
+    display: none;
+    position: absolute;
+    background-color: #5EBCEB;
+    right: 20px;
+    top: 30px;
+    border: 2px solid black;
+  }
+  header ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    left: 90px;
+    border-bottom: 10px solid #5EBCEB;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  header ul.ativar {
+    display: block;
+  }
+  header li {
+    padding: 12px 5px;
+    font-size: 14px;
+  }
+  nav {
+    margin-top: 80px;
+  }
+  nav h1 {
+    font-size: 22px;
+    white-space: none;
+  }
+  nav h2 {
+    font-size: 12px;
+  }
+  nav h3 {
+    font-size: 9px;
+  }
+  section {
+    height: 1600px;
+  }
+  section h1.principal {
+    font-size: 16px;
+    text-align: center;
+  }
+  section h1.principal::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 120px;
+    background-color: black;
+    margin: 17px auto;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) and (min-width: 360px) and (max-width: 643px) {
+  section h1.principal::after {
+    width: 90px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 643px) {
+  section div.box.ativar-scroll {
+    height: 400px;
+    width: 350px;
+  }
+  section div.box.ativar-scroll .imgs p.valor {
+    font-size: 16px;
+  }
+  main h1 {
+    font-size: 16px;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
