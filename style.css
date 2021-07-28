@@ -566,7 +566,7 @@ footer {
 .arrow-nav {
   display: flex;
   justify-content: space-around;
-  margin-top: -15px;
+  margin-top: -10px;
 }
 
 .arrow-nav button {
@@ -576,7 +576,7 @@ footer {
   color: white;
   width: 40px;
   height: 40px;
-  background: #306078 url("img/arrow.svg") center center no-repeat;
+  background: #306078 url("/img/arrow.svg") center center no-repeat;
 }
 
 .arrow-nav button.prev {
