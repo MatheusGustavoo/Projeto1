@@ -280,7 +280,7 @@ section .ap .box .imgs .valor {
 }
 
 main {
-  height: 650px;
+  height: 850px;
   border-top: 3px solid #377C9E;
   margin-top: 90px;
 }
@@ -307,6 +307,23 @@ main h1::after {
   main h1::after {
     width: 90px;
   }
+}
+
+main ul {
+  display: flex;
+}
+
+main ul li {
+  margin: 40px 300px;
+  list-style: none;
+}
+
+main ul li img {
+  min-width: 100%;
+}
+
+main .slide {
+  overflow: hidden;
 }
 
 footer {
@@ -518,4 +535,50 @@ footer {
     opacity: 1;
     transform: translate3d(0px, 0, 0);
   }
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.custom-controls li {
+  opacity: .8;
+  transform: scale(0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  background-color: #5ebceb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: .3s;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -40px;
+}
+
+.arrow-nav button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  background: #306078 url("../img/arrow.svg") center center no-repeat;
+}
+
+.arrow-nav button.prev {
+  transform: rotate(-180deg);
 }
