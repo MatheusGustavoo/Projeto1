@@ -537,6 +537,12 @@ footer {
   }
 }
 
+.foot {
+  font-weight: 600;
+  padding-top: 40px;
+  text-align: center;
+}
+
 .custom-controls {
   display: flex;
   justify-content: center;
@@ -576,7 +582,9 @@ footer {
   color: white;
   width: 40px;
   height: 40px;
-  background: url("../img/arrow.svg") rgb(48, 96, 120)  center center no-repeat;
+
+background: url("../img/arrow.svg") #306078 center center no-repeat;
+
 }
 
 .arrow-nav button.prev {
